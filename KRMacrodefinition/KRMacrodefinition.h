@@ -44,5 +44,9 @@ return __##CLASS_NAME##_instance;                        \
 #define KRScreenWidth     [[UIScreen mainScreen] bounds].size.width
 #define KRScreenHeight    [[UIScreen mainScreen] bounds].size.height
 
+
+#define KRDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define KRPhoneXBar 34
+
 #endif
 
